@@ -74,7 +74,7 @@ def solution(room, me, target, distance):
 
     # Goal:
     #   1. Select the unique and the shortest distance points
-    #   2. Select the ones with "t" tags
+    #   2. Select the ones with "t" tag
     selected_points = {}
     for p in all_points:
         if p[0] not in selected_points:
@@ -108,31 +108,3 @@ def cal_dist(t, m):
 
 def cal_direct(t, m):
     return atan2((t[1] - m[1]), (t[0] - m[0]))
-
-
-# print(solution([3, 2], [1, 1], [2, 1], 4))  # ans: 7
-# print(solution([2, 5], [1, 2], [1, 4], 11))  # ans:27
-# print(solution([23, 10], [6, 4], [3, 2], 23)) # ans:8
-# print(solution([1250, 1250], [1000, 1000], [500, 400], 10000)) # ans: 196
-# print(solution([10, 10], [4, 4], [3, 3], 5000)) # ans:739323
-# print(solution([3, 2], [1, 1], [2, 1], 7)) # ans:19
-# print(solution([2, 3], [1, 1], [1, 2], 4)) # ans:7
-# print(solution([3, 4], [1, 2], [2, 1], 7)) # ans: 10
-# print(solution([4, 4], [2, 2], [3, 1], 6)) # ans: 7
-# print(solution([300, 275], [150, 150], [180, 100], 500)) # ans: 9
-print(solution([3, 4], [1, 1], [2, 2], 500)) # ans: 54243
-
-# def test():
-#     assert solution([3, 2], [1, 1], [2, 1], 4) == 7
-#     # assert solution([2, 5], [1, 2], [1, 4], 11) == 27
-#     # assert solution([23, 10], [6, 4], [3, 2], 23) == 8
-#     # assert solution([1250, 1250], [1000, 1000], [500, 400], 10000) == 196
-#     # assert solution([10, 10], [4, 4], [3, 3], 5000) == 739323
-#     # assert solution([3, 2], [1, 1], [2, 1], 7) == 19
-#     # assert solution([2, 3], [1, 1], [1, 2], 4) == 7
-#     # assert solution([3, 4], [1, 2], [2, 1], 7) == 10
-#     # assert solution([4, 4], [2, 2], [3, 1], 6) == 7
-#     # assert solution([300, 275], [150, 150], [180, 100], 500) == 9
-#     # assert solution([3, 4], [1, 1], [2, 2], 500) == 54243
-#
-# test()
